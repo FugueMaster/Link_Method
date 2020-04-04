@@ -159,7 +159,7 @@ int main()
 
 
 void wr_directory(fileFormat *fstring) {
-	int blk_cnt, extra_cnt, b, i, j, dir;
+	int blk_cnt, extra_cnt, b, i, j, dir, blk_left;
 	char dptr, data;
 	bool blk_free;
 
@@ -202,7 +202,7 @@ void wr_directory(fileFormat *fstring) {
 				{
 					blk_cnt = blk_cnt + 1;	// needed blk_cnt to parse into writing disk in Link method
 				}
-
+				blk_left = blk_cnt;			// backup into blk_left for for loop
 				/* Write data into disk */
 
 				dptr = 1; /* avoid filename */
@@ -225,17 +225,19 @@ void wr_directory(fileFormat *fstring) {
 								printf("\nDisk is full");
 								break;
 							}
-							else if (j == 4 && blk_cnt !=0)	// index reaches last block index
+							else if (j == 4 && blk_left !=0)	// index reaches last block index
 							{
 								hdd[i] = b + 1;	// writes next block number into last block index
 								printf("\nIndex: %d Block: %d ", i, b);
 								printf("Data = %d", hdd[i]);
-								blk_cnt--;		// Deincrement blk_cnt
+								blk_left--;		// Decre blk_left
 							}
 							else {				// within index range of hdd
 								hdd[i] = data;	// writes into disk
 								printf("\nIndex: %d Block: %d ", i, b);
 								printf("Data = %d", hdd[i]);
+								dptr++;	// move to next data
+
 							}
 							
 						}
@@ -243,9 +245,10 @@ void wr_directory(fileFormat *fstring) {
 						{
 							//hdd[i] = NULL;
 							hdd[i] = -1;	// add end data indicator
+							printf("\nIndex: %d Block: %d ", i, b);
+							printf("Data = %d", hdd[i]);
 							break;
 						}
-						dptr++;	// move to next data
 						if (dptr > (fstring->filesize + 1))	// end file
 						{
 							break;
@@ -259,12 +262,12 @@ void wr_directory(fileFormat *fstring) {
 				//Directory Management 
 				dirEntry.dirMem[FN] = fstring->filedata[0];				//backup filename
 				dirEntry.dirMem[ST] = blk_no;							//backup start block
-//				dirEntry.dirMem[END] = ;								//backup end block
+				dirEntry.dirMem[END] = b-1;								//backup end block
 				hdd[dir] = dirEntry.dirOp;								//store directory into hdd[]
 				printf("\nDirectory Row = %d", dir);					//print directory row
 				printf("\ndirMem[2] = %d", dirEntry.dirMem[FN]);		//print file name
 				printf("\ndirMem[1] = %d", dirEntry.dirMem[ST]);		//print start block
-				printf("\ndirMem[0] = end" /*dirEntry.dirMem[END]*/);		//print data end block
+				printf("\ndirMem[0] = %d", dirEntry.dirMem[END]);		//print data end block
 			}
 
 		}
