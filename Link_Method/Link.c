@@ -6,7 +6,7 @@
 #include <time.h>
 
 
-#define FILE_SIZE	(20)		//File Size
+#define FILE_SIZE	(20)	//File Size
 #define CSV_LINE	(64)	//CSV file - number of character per line
 #define CSV_CMD		(0)		//Position of Operation command
 #define CSV_FNAME	(1)		//Position of FILENAME_MAX
@@ -81,7 +81,7 @@ int main()
 
 	memset(&filestring, 0, sizeof(fileFormat));		//clearing of structure
 
-	stream = fopen("operations.csv", "r");			//Opening file when ready mode is achieved.
+	stream = fopen("operations_test.csv", "r");			//Opening file when ready mode is achieved.
 	while (fgets(line, CSV_LINE, stream))			//Reading lines
 	{
 		field_cnt = 0;								//Clearing field counter
