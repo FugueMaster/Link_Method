@@ -244,7 +244,6 @@ void wr_directory(fileFormat *fstring) {
 						}
 						else  //NULL
 						{
-							//hdd[i] = NULL;
 							hdd[i] = -1;	// add end data indicator
 							printf("\nIndex: %d Block: %d ", i, b);
 							printf("Data = %d", hdd[i]);
@@ -335,10 +334,9 @@ void rd_directory(fileFormat *fstring)
 				}
 				else
 				{
-					//j = block_to_index(link_blk);	// get index for next linked data block
 					filestring[p] = hdd[j];		// extract data out from hdd
 
-					if (d == 4 && hdd[j] != -1)					// extract next linked block, if 5th index is not -1
+					if (d == 4 && hdd[j] != -1)	// extract next linked block, if 5th index is not -1
 						link_blk = hdd[j];
 
 					printf("\nIndex: %d Block: %d ", j, dblk);
