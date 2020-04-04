@@ -6,8 +6,8 @@
 #include <time.h>
 
 
-#define FILE_SIZE	(20)	//File Size
-#define CSV_LINE	(64)	//CSV file - number of character per line
+#define FILE_SIZE	(50)	//File Size
+#define CSV_LINE	(200)	//CSV file - number of character per line
 #define CSV_CMD		(0)		//Position of Operation command
 #define CSV_FNAME	(1)		//Position of FILENAME_MAX
 #define CSV_DATA	(2)		//Position of Data
@@ -81,7 +81,7 @@ int main()
 
 	memset(&filestring, 0, sizeof(fileFormat));		//clearing of structure
 
-	stream = fopen("operations_test.csv", "r");			//Opening file when ready mode is achieved.
+	stream = fopen("operations_crashTest.csv", "r");			//Opening file when ready mode is achieved.
 	while (fgets(line, CSV_LINE, stream))			//Reading lines
 	{
 		field_cnt = 0;								//Clearing field counter
@@ -195,9 +195,9 @@ void wr_directory(fileFormat *fstring) {
 			}
 			else  // blk_free is true
 			{
-				//compute block length
-				blk_cnt = (fstring->filesize / 5);
-				extra_cnt = (fstring->filesize % 5);
+				//compute block length, 4 data indexes per block
+				blk_cnt = (fstring->filesize / 4);
+				extra_cnt = (fstring->filesize % 4);
 				if (extra_cnt > 0)
 				{
 					blk_cnt = blk_cnt + 1;	// needed blk_cnt to parse into writing disk in Link method
@@ -225,7 +225,7 @@ void wr_directory(fileFormat *fstring) {
 								printf("\nDisk is full");
 								break;
 							}
-							else if (j == 4 && blk_left !=0)	// reaches last block index
+							else if (j == 4 && blk_left != 0)	// reaches last block index
 							{
 								hdd[i] = b + 1;	// writes next block number into last block index
 								// Maybe add randomiser for next block
