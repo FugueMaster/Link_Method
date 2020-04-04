@@ -7,7 +7,7 @@
 
 
 #define FILE_SIZE	(50)	//File Size
-#define CSV_LINE	(200)	//CSV file - number of character per line
+#define CSV_LINE	(500)	//CSV file - number of character per line
 #define CSV_CMD		(0)		//Position of Operation command
 #define CSV_FNAME	(1)		//Position of FILENAME_MAX
 #define CSV_DATA	(2)		//Position of Data
@@ -222,16 +222,27 @@ void wr_directory(fileFormat *fstring) {
 						if (data != NULL)
 						{
 							if (i >= 500) {		// prevents data from writing from index 500 onwards
-								printf("\nDisk is full");
+								printf("\nDisk is full, unable to write data");
 								break;
 							}
 							else if (j == 4 && blk_left != 0)	// reaches last block index
 							{
-								hdd[i] = b + 1;	// writes next block number into last block index
+								if (i == 499)
+								{
+									hdd[i] = -1;				// put end data indicator when disk is full
+									printf("\nIndex: %d Block: %d ", i, b);
+									printf("Data = %d", hdd[i]);
+									break;
+								}
+								else
+								{
+									hdd[i] = b + 1;	// writes next block number into last block index
 								// Maybe add randomiser for next block
-								printf("\nIndex: %d Block: %d ", i, b);
-								printf("Data = %d", hdd[i]);
-								blk_left--;		// Decre blk_left
+									printf("\nIndex: %d Block: %d ", i, b);
+									printf("Data = %d", hdd[i]);
+									printf("\n**********************************************************************\n");
+									blk_left--;		// Decre blk_left
+								}
 							}
 							else {				// within index range of hdd
 								hdd[i] = data;	// writes into disk
@@ -271,7 +282,7 @@ void wr_directory(fileFormat *fstring) {
 			}
 
 		}
-		printf("\n====================================================\n");
+		printf("\n\n====================================================\nNext Command:\n");
 	}
 }
 
