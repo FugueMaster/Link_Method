@@ -13,7 +13,8 @@
 #define CSV_DATA	(2)		//Position of Data
 #define FN			(2)		//position of filename in directtory integer
 #define ST			(1)		//position of start directory in directory integer
-#define LEN			(0)		//Position of the length of block used
+#define END			(0)		//postion of end directory in directory integer
+//#define LEN			(0)		//Position of the length of block used
 #define START_DIR	(0)		//Start row of the directory based on hadd[]
 #define END_DIR		(9)		//End row of the directory based on hdd[]
 #define START_BLOCK (2)
@@ -202,26 +203,15 @@ void wr_directory(fileFormat *fstring) {
 					blk_cnt = blk_cnt + 1;
 				}
 
-				dptr = 1; /* avoid filename */
-
-				//Directory Management 
-				dirEntry.dirMem[FN] = fstring->filedata[0];				//backup filename
-				dirEntry.dirMem[ST] = blk_no;							//backup start block
-				dirEntry.dirMem[LEN] = blk_cnt;							//length of filestring
-				hdd[dir] = dirEntry.dirOp;								//store directory into hdd[]
-				printf("\nDirectory Row = %d", dir);					//print directory row
-				printf("\ndirMem[2] = %d", dirEntry.dirMem[FN]);		//print file name
-				printf("\ndirMem[1] = %d", dirEntry.dirMem[ST]);		//print start block
-				printf("\ndirMem[0] = %d", dirEntry.dirMem[LEN]);		//print length of block
-
 				/* Write data into disk */
 
+				dptr = 1; /* avoid filename */
 				for (b = blk_no; b < (blk_no + blk_cnt); b++)	/* Go block by block */
 				{
 					freestate = check_block_free(b);
 					if (freestate == false)
 					{
-						printf("\nContinguous block error at block = %d", b);	// print ereror message at block location
+						printf("\nLinked block error at block = %d", b);	// print error message at block location
 						break;
 					}
 					i = block_to_index(b);
@@ -239,8 +229,6 @@ void wr_directory(fileFormat *fstring) {
 							hdd[i] = data;	// writes into disk
 							printf("\nIndex: %d Block: %d ", i, b);
 							printf("Data = %d", hdd[i]);
-
-							//printf("\nhdd[%d] written!", i);
 						}
 						else  //NULL
 						{
@@ -258,6 +246,16 @@ void wr_directory(fileFormat *fstring) {
 					// update Free space
 					free_add(b);
 				}
+
+				//Directory Management 
+				dirEntry.dirMem[FN] = fstring->filedata[0];				//backup filename
+				dirEntry.dirMem[ST] = blk_no;							//backup start block
+//				dirEntry.dirMem[END] = ;								//backup end block
+				hdd[dir] = dirEntry.dirOp;								//store directory into hdd[]
+				printf("\nDirectory Row = %d", dir);					//print directory row
+				printf("\ndirMem[2] = %d", dirEntry.dirMem[FN]);		//print file name
+				printf("\ndirMem[1] = %d", dirEntry.dirMem[ST]);		//print start block
+				printf("\ndirMem[0] = end" /*dirEntry.dirMem[END]*/);		//print data end block
 			}
 
 		}
@@ -284,7 +282,7 @@ void rd_directory(fileFormat *fstring)
 			printf("\nREAD, %d", fstring->filedata[0]);
 			printf("\ndirMem[2] = %d", dirEntry.dirMem[FN]);
 			printf("\ndirMem[1] = %d", dirEntry.dirMem[ST]);
-			printf("\ndirMem[0] = %d", dirEntry.dirMem[LEN]);
+			//printf("\ndirMem[0] = %d", dirEntry.dirMem[LEN]);
 			break;
 
 		}
@@ -361,7 +359,7 @@ void del_directory(fileFormat *fstring)
 			printf("\nDELETE, %d", fstring->filedata[0]);
 			printf("\ndirMem[2] = %d", dirEntry.dirMem[FN]);
 			printf("\ndirMem[1] = %d", dirEntry.dirMem[ST]);
-			printf("\ndirMem[0] = %d", dirEntry.dirMem[LEN]);
+			//printf("\ndirMem[0] = %d", dirEntry.dirMem[LEN]);
 			hdd[d] = 0;	//clear the directory here
 			break;
 
