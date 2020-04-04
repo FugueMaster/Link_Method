@@ -225,9 +225,10 @@ void wr_directory(fileFormat *fstring) {
 								printf("\nDisk is full");
 								break;
 							}
-							else if (j == 4 && blk_left !=0)	// index reaches last block index
+							else if (j == 4 && blk_left !=0)	// reaches last block index
 							{
 								hdd[i] = b + 1;	// writes next block number into last block index
+								// Maybe add randomiser for next block
 								printf("\nIndex: %d Block: %d ", i, b);
 								printf("Data = %d", hdd[i]);
 								blk_left--;		// Decre blk_left
@@ -277,7 +278,7 @@ void wr_directory(fileFormat *fstring) {
 
 void rd_directory(fileFormat *fstring)
 {
-	int d, stBlk, dblk, p, i, j;
+	int d, stBlk, dblk, p, i, j, link_blk, blk_cnt;
 	char filestring[CSV_LINE];
 
 
@@ -294,7 +295,7 @@ void rd_directory(fileFormat *fstring)
 			printf("\nREAD, %d", fstring->filedata[0]);
 			printf("\ndirMem[2] = %d", dirEntry.dirMem[FN]);
 			printf("\ndirMem[1] = %d", dirEntry.dirMem[ST]);
-			//printf("\ndirMem[0] = %d", dirEntry.dirMem[LEN]);
+			printf("\ndirMem[0] = %d", dirEntry.dirMem[END]);
 			break;
 
 		}
@@ -312,23 +313,33 @@ void rd_directory(fileFormat *fstring)
 
 		// now to search for data block
 		dirend = false;	// initialise to begn loop
-
-		j = block_to_index(stBlk);	// used data block to convert to hdd index
+		link_blk = 0;	// init link_blk
+		blk_cnt = 0;	// init block counter for link
+		j = block_to_index(stBlk);	// used start data block to convert to hdd index
 		dblk = stBlk;	//init start block
 		printf("\nThis is the Data Block");
 
 		while (dirend == false)
-		{
+		{	
+			if (blk_cnt != 0)	// for more than one occupied data block
+			{
+				j = block_to_index(link_blk);	// get index for next linked data block
+			}
+
 			for (d = 0; d < 5; d++)
 			{
-				if (hdd[j] == -1)
+				if (hdd[j] == -1)				// Reaches end data indicator
 				{
 					dirend = true;
 					break;
 				}
 				else
 				{
+					//j = block_to_index(link_blk);	// get index for next linked data block
 					filestring[p] = hdd[j];		// extract data out from hdd
+
+					if (d == 4 && hdd[j] != -1)					// extract next linked block, if 5th index is not -1
+						link_blk = hdd[j];
 
 					printf("\nIndex: %d Block: %d ", j, dblk);
 					printf("First Data = %d", hdd[j]);
@@ -337,9 +348,9 @@ void rd_directory(fileFormat *fstring)
 					j++;	// Incr next hdd data in the data block
 				}
 			}
-			dblk++; //Go to nexty data block
+			dblk = link_blk;	// pass link_blk into next dblk
+			blk_cnt++;			// incr block counter
 		}
-
 		// Get ready to print the filestring here
 		printf("\nThe read file is ");
 
@@ -356,7 +367,7 @@ void rd_directory(fileFormat *fstring)
 
 void del_directory(fileFormat *fstring)
 {
-	int d, stBlk, dblk, p, i, j;
+	int d, stBlk, dblk, p, i, j, link_blk, blk_cnt;
 	char filestring[CSV_LINE];
 	dirstate = false;
 	// search directory with matching filename
@@ -364,14 +375,14 @@ void del_directory(fileFormat *fstring)
 	{
 		dirEntry.dirOp = hdd[d];	// get back directory data from hdd
 
-		if (dirEntry.dirMem[FN] == fstring->filedata[0])
+		if (dirEntry.dirMem[FN] == fstring->filedata[0])	// Matches filename
 		{
 			dirstate = true;
 			stBlk = dirEntry.dirMem[ST];	// backup start block number
 			printf("\nDELETE, %d", fstring->filedata[0]);
 			printf("\ndirMem[2] = %d", dirEntry.dirMem[FN]);
 			printf("\ndirMem[1] = %d", dirEntry.dirMem[ST]);
-			//printf("\ndirMem[0] = %d", dirEntry.dirMem[LEN]);
+			printf("\ndirMem[0] = %d", dirEntry.dirMem[END]);
 			hdd[d] = 0;	//clear the directory here
 			break;
 
@@ -385,18 +396,21 @@ void del_directory(fileFormat *fstring)
 	{
 
 		p = 0;	// pointer for filestring
-		//filestring[p] = fstring->filedata[0];	// assemble the filename into temp string
 		p++;	// move to next location
 
 		// now to search for data block
 		dirend = false;	// initialise to begin loop
-
+		link_blk = 0;	// init link_blk
+		blk_cnt = 0;	// init block counter for link
 		j = block_to_index(stBlk);	// used data block to convert to hdd index
 		dblk = stBlk;	//init start block
 		printf("\nThis is the Data Block");
 
 		while (dirend == false)
 		{
+			if (blk_cnt != 0)	// for more than one occupied data block
+				j = block_to_index(link_blk);	// get index for next linked data block
+
 			free_del(dblk);
 			for (d = 0; d < 5; d++)
 			{
@@ -408,16 +422,16 @@ void del_directory(fileFormat *fstring)
 				}
 				else
 				{
-					hdd[j] = 0;		// extract data out from hdd
+					if (d == 4)					//extract next linked block
+						link_blk = hdd[j];
 
-					//printf("\nIndex: %d Block: %d ", j, dblk);
-					//printf("First Data = %d", hdd[j]);
-
+					hdd[j] = 0;		// delete by setting to 0
 					p++;	// Incr filestring pointer
 					j++;	// Incr next hdd data in the data block
 				}
 			}
-			dblk++; //Go to next data block
+			dblk = link_blk;	// pass link_blk into next dblk
+			blk_cnt++;			// incr block counter
 		}
 
 		// Get ready to print the filestring here
