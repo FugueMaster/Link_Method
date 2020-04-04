@@ -200,7 +200,7 @@ void wr_directory(fileFormat *fstring) {
 				extra_cnt = (fstring->filesize % 5);
 				if (extra_cnt > 0)
 				{
-					blk_cnt = blk_cnt + 1;
+					blk_cnt = blk_cnt + 1;	// needed blk_cnt to parse into writing disk in Link method
 				}
 
 				/* Write data into disk */
@@ -218,17 +218,26 @@ void wr_directory(fileFormat *fstring) {
 
 					for (j = 0; j < 5; j++)				/* write data 0,1,2,3,4 */
 					{
-						//i = block_to_index(b);
 						data = fstring->filedata[dptr];
 						if (data != NULL)
 						{
-							if (i >= 500) {
+							if (i >= 500) {		// prevents data from writing from index 500 onwards
 								printf("\nDisk is full");
 								break;
 							}
-							hdd[i] = data;	// writes into disk
-							printf("\nIndex: %d Block: %d ", i, b);
-							printf("Data = %d", hdd[i]);
+							else if (j == 4 && blk_cnt !=0)	// index reaches last block index
+							{
+								hdd[i] = b + 1;	// writes next block number into last block index
+								printf("\nIndex: %d Block: %d ", i, b);
+								printf("Data = %d", hdd[i]);
+								blk_cnt--;		// Deincrement blk_cnt
+							}
+							else {				// within index range of hdd
+								hdd[i] = data;	// writes into disk
+								printf("\nIndex: %d Block: %d ", i, b);
+								printf("Data = %d", hdd[i]);
+							}
+							
 						}
 						else  //NULL
 						{
@@ -241,11 +250,11 @@ void wr_directory(fileFormat *fstring) {
 						{
 							break;
 						}
-						i++;
+						i++;	// write next index
 					}
-					// update Free space
+					// update Free space for every occupied block
 					free_add(b);
-				}
+				}	// goes to next block
 
 				//Directory Management 
 				dirEntry.dirMem[FN] = fstring->filedata[0];				//backup filename
