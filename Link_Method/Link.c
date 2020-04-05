@@ -159,9 +159,9 @@ int main()
 
 
 void wr_directory(fileFormat *fstring) {
-	int blk_cnt, extra_cnt, b, i, j, dir, blk_left;
+	int blk_cnt, extra_cnt, b, bp, i, j, dir, blk_left;
 	char dptr, data;
-	bool blk_free;
+	bool blk_free, end;
 
 	//Perform Directory update here - using Linear method
 	dir = END_DIR + 1;
@@ -184,7 +184,7 @@ void wr_directory(fileFormat *fstring) {
 		//Proceed to do data block
 		blk_no = check_block_free();	// get free block number in ascending order
 		if (blk_no == NULL) {
-			printf(" Disk Full ! \n");
+			printf("\nDisk Full !!! \n");
 		}
 		else   //blk is okay
 		{
@@ -198,82 +198,81 @@ void wr_directory(fileFormat *fstring) {
 				//compute block length, 4 data indexes per block
 				blk_cnt = (fstring->filesize / 4);
 				extra_cnt = (fstring->filesize % 4);
-				if (extra_cnt > 0)
+				if (extra_cnt >= 0)
 				{
 					blk_cnt = blk_cnt + 1;	// needed blk_cnt to parse into writing disk in Link method
 				}
+
 				blk_left = blk_cnt;			// backup into blk_left for for loop
+
 				/* Write data into disk */
 
 				dptr = 1; /* avoid filename */
-				for (b = blk_no; b < (blk_no + blk_cnt); b++)	/* Go block by block */
+				end = false;
+				b = blk_no;
+				freestate = check_block_free(b);
+
+				while (end == false)	/* loop till the end */
 				{
-					freestate = check_block_free(b);
-					if (freestate == false)
-					{
-						printf("\nLinked block error at block = %d", b);	// print error message at block location
-						break;
-					}
 					i = block_to_index(b);
 
-					for (j = 0; j < 5; j++)				/* write data 0,1,2,3,4 */
+					for (j = 0; j < 4; j++)				/* write data 0,1,2,3 */
 					{
 						data = fstring->filedata[dptr];
 						if (data != NULL)
-						{
-							if (i >= 500) {		// prevents data from writing from index 500 onwards
-								printf("\nDisk is full, unable to write data");
-								break;
-							}
-							else if (j == 4 && blk_left != 0)	// reaches last block index
-							{
-								if (i == 499)
-								{
-									hdd[i] = -1;				// put end data indicator when disk is full
-									printf("\nIndex: %d Block: %d ", i, b);
-									printf("Data = %d", hdd[i]);
-									break;
-								}
-								else
-								{
-									hdd[i] = b + 1;	// writes next block number into last block index
-								// Maybe add randomiser for next block
-									printf("\nIndex: %d Block: %d ", i, b);
-									printf("Data = %d", hdd[i]);
-									printf("\n**********************************************************************\n");
-									blk_left--;		// Decre blk_left
-								}
-							}
-							else {				// within index range of hdd
-								hdd[i] = data;	// writes into disk
-								printf("\nIndex: %d Block: %d ", i, b);
-								printf("Data = %d", hdd[i]);
-								dptr++;	// move to next data
-
-							}
-							
+						{			// within index range of hdd
+							hdd[i] = data;	// writes into disk
+							printf("\nIndex: %d Block: %d ", i, b);
+							printf("Data = %d", hdd[i]);
+							dptr++;	// move to next data
+							i++;
 						}
 						else  //NULL
 						{
 							hdd[i] = -1;	// add end data indicator
 							printf("\nIndex: %d Block: %d ", i, b);
 							printf("Data = %d", hdd[i]);
+							end = true;
 							break;
 						}
-						if (dptr > (fstring->filesize + 1))	// end file
-						{
-							break;
-						}
-						i++;	// write next index
 					}
-					// update Free space for every occupied block
+					//Update free block here
 					free_add(b);
+
+					if (end == false)
+					{
+						//Now prepare next block
+						bp = check_block_free();	// get free block number in ascending order
+						if (bp == NULL) {
+							printf("\nDisk Full !!! \n");
+							break;
+						}
+						else
+						{
+							hdd[i] = bp;		//store next block
+							printf("\nIndex: %d Block: %d ", i, b);
+							printf("Data = %d", hdd[i]);
+							printf("\n**********************************************************************\n");
+							blk_left--;		// Decre blk_left
+							i++;
+							b = bp;			//update as new block
+						}
+					}
+
+					//check end of file
+					//if (dptr >= (fstring->filesize + 1))	// end file
+					//{
+					//	end = true;
+					//	break;
+					//}
+
+					// update Free space for every occupied block
 				}	// goes to next block
 
 				//Directory Management 
 				dirEntry.dirMem[FN] = fstring->filedata[0];				//backup filename
 				dirEntry.dirMem[ST] = blk_no;							//backup start block
-				dirEntry.dirMem[END] = b-1;								//backup end block
+				dirEntry.dirMem[END] = b;								//backup end block
 				hdd[dir] = dirEntry.dirOp;								//store directory into hdd[]
 				printf("\nDirectory Row = %d", dir);					//print directory row
 				printf("\ndirMem[2] = %d", dirEntry.dirMem[FN]);		//print file name
@@ -331,12 +330,7 @@ void rd_directory(fileFormat *fstring)
 
 		while (dirend == false)
 		{	
-			if (blk_cnt != 0)	// for more than one occupied data block
-			{
-				j = block_to_index(link_blk);	// get index for next linked data block
-			}
-
-			for (d = 0; d < 5; d++)
+			for (d = 0; d < 4; d++)			/* do only 0,1,2,3 */
 			{
 				if (hdd[j] == -1)				// Reaches end data indicator
 				{
@@ -347,9 +341,6 @@ void rd_directory(fileFormat *fstring)
 				{
 					filestring[p] = hdd[j];		// extract data out from hdd
 
-					if (d == 4 && hdd[j] != -1)	// extract next linked block, if 5th index is not -1
-						link_blk = hdd[j];
-
 					printf("\nIndex: %d Block: %d ", j, dblk);
 					printf("First Data = %d", hdd[j]);
 
@@ -357,7 +348,13 @@ void rd_directory(fileFormat *fstring)
 					j++;	// Incr next hdd data in the data block
 				}
 			}
-			dblk = link_blk;	// pass link_blk into next dblk
+
+			//Check next block here
+			if ((hdd[j] != NULL) && (dirend == false))
+			{
+				j = block_to_index(hdd[j]);	// get index for next linked data block
+			}
+
 			blk_cnt++;			// incr block counter
 		}
 		// Get ready to print the filestring here
@@ -497,7 +494,7 @@ int check_block_free(void)
 	int b, i, block;
 
 	block = NULL;
-	for (b = START_BLOCK; b <= END_BLOCK; b++)
+	for (b = START_BLOCK; b < END_BLOCK; b++)
 	{
 		i = block_to_index(b);
 		if (hdd[i] == NULL)	// checking every index in hdd then return as block
