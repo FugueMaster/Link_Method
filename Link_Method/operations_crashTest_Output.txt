@@ -1,0 +1,848 @@
+ADD, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25
+Index: 10 Block: 2 Data = 2
+Index: 11 Block: 2 Data = 3
+Index: 12 Block: 2 Data = 4
+Index: 13 Block: 2 Data = 5
+Index: 14 Block: 2 Data = 3
+**********************************************************************
+
+Index: 15 Block: 3 Data = 6
+Index: 16 Block: 3 Data = 7
+Index: 17 Block: 3 Data = 8
+Index: 18 Block: 3 Data = 9
+Index: 19 Block: 3 Data = 4
+**********************************************************************
+
+Index: 20 Block: 4 Data = 10
+Index: 21 Block: 4 Data = 11
+Index: 22 Block: 4 Data = 12
+Index: 23 Block: 4 Data = 13
+Index: 24 Block: 4 Data = 5
+**********************************************************************
+
+Index: 25 Block: 5 Data = 14
+Index: 26 Block: 5 Data = 15
+Index: 27 Block: 5 Data = 16
+Index: 28 Block: 5 Data = 17
+Index: 29 Block: 5 Data = 6
+**********************************************************************
+
+Index: 30 Block: 6 Data = 18
+Index: 31 Block: 6 Data = 19
+Index: 32 Block: 6 Data = 20
+Index: 33 Block: 6 Data = 21
+Index: 34 Block: 6 Data = 7
+**********************************************************************
+
+Index: 35 Block: 7 Data = 22
+Index: 36 Block: 7 Data = 23
+Index: 37 Block: 7 Data = 24
+Index: 38 Block: 7 Data = 25
+Index: 39 Block: 7 Data = 8
+**********************************************************************
+
+Index: 40 Block: 8 Data = 1
+Index: 41 Block: 8 Data = 2
+Index: 42 Block: 8 Data = 3
+Index: 43 Block: 8 Data = 4
+Index: 44 Block: 8 Data = 9
+**********************************************************************
+
+Index: 45 Block: 9 Data = 5
+Index: 46 Block: 9 Data = 6
+Index: 47 Block: 9 Data = 7
+Index: 48 Block: 9 Data = 8
+Index: 49 Block: 9 Data = 10
+**********************************************************************
+
+Index: 50 Block: 10 Data = 9
+Index: 51 Block: 10 Data = 10
+Index: 52 Block: 10 Data = 11
+Index: 53 Block: 10 Data = 12
+Index: 54 Block: 10 Data = 11
+**********************************************************************
+
+Index: 55 Block: 11 Data = 13
+Index: 56 Block: 11 Data = 14
+Index: 57 Block: 11 Data = 15
+Index: 58 Block: 11 Data = 16
+Index: 59 Block: 11 Data = 12
+**********************************************************************
+
+Index: 60 Block: 12 Data = 17
+Index: 61 Block: 12 Data = 18
+Index: 62 Block: 12 Data = 19
+Index: 63 Block: 12 Data = 20
+Index: 64 Block: 12 Data = 13
+**********************************************************************
+
+Index: 65 Block: 13 Data = 21
+Index: 66 Block: 13 Data = 22
+Index: 67 Block: 13 Data = 23
+Index: 68 Block: 13 Data = 24
+Index: 69 Block: 13 Data = 14
+**********************************************************************
+
+Index: 70 Block: 14 Data = 25
+Index: 71 Block: 14 Data = 49
+Index: 72 Block: 14 Data = -1
+Directory Row = 0
+dirMem[2] = 1
+dirMem[1] = 2
+dirMem[0] = 14
+
+====================================================
+Next Command:
+
+ADD, 2, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 2, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34
+Index: 75 Block: 15 Data = 11
+Index: 76 Block: 15 Data = 12
+Index: 77 Block: 15 Data = 13
+Index: 78 Block: 15 Data = 14
+Index: 79 Block: 15 Data = 16
+**********************************************************************
+
+Index: 80 Block: 16 Data = 15
+Index: 81 Block: 16 Data = 16
+Index: 82 Block: 16 Data = 17
+Index: 83 Block: 16 Data = 18
+Index: 84 Block: 16 Data = 17
+**********************************************************************
+
+Index: 85 Block: 17 Data = 19
+Index: 86 Block: 17 Data = 20
+Index: 87 Block: 17 Data = 21
+Index: 88 Block: 17 Data = 22
+Index: 89 Block: 17 Data = 18
+**********************************************************************
+
+Index: 90 Block: 18 Data = 23
+Index: 91 Block: 18 Data = 24
+Index: 92 Block: 18 Data = 25
+Index: 93 Block: 18 Data = 26
+Index: 94 Block: 18 Data = 19
+**********************************************************************
+
+Index: 95 Block: 19 Data = 27
+Index: 96 Block: 19 Data = 28
+Index: 97 Block: 19 Data = 29
+Index: 98 Block: 19 Data = 30
+Index: 99 Block: 19 Data = 20
+**********************************************************************
+
+Index: 100 Block: 20 Data = 31
+Index: 101 Block: 20 Data = 32
+Index: 102 Block: 20 Data = 33
+Index: 103 Block: 20 Data = 34
+Index: 104 Block: 20 Data = 21
+**********************************************************************
+
+Index: 105 Block: 21 Data = 2
+Index: 106 Block: 21 Data = 11
+Index: 107 Block: 21 Data = 12
+Index: 108 Block: 21 Data = 13
+Index: 109 Block: 21 Data = 22
+**********************************************************************
+
+Index: 110 Block: 22 Data = 14
+Index: 111 Block: 22 Data = 15
+Index: 112 Block: 22 Data = 16
+Index: 113 Block: 22 Data = 17
+Index: 114 Block: 22 Data = 23
+**********************************************************************
+
+Index: 115 Block: 23 Data = 18
+Index: 116 Block: 23 Data = 19
+Index: 117 Block: 23 Data = 20
+Index: 118 Block: 23 Data = 21
+Index: 119 Block: 23 Data = 24
+**********************************************************************
+
+Index: 120 Block: 24 Data = 22
+Index: 121 Block: 24 Data = 23
+Index: 122 Block: 24 Data = 24
+Index: 123 Block: 24 Data = 25
+Index: 124 Block: 24 Data = 25
+**********************************************************************
+
+Index: 125 Block: 25 Data = 26
+Index: 126 Block: 25 Data = 27
+Index: 127 Block: 25 Data = 28
+Index: 128 Block: 25 Data = 29
+Index: 129 Block: 25 Data = 26
+**********************************************************************
+
+Index: 130 Block: 26 Data = 30
+Index: 131 Block: 26 Data = 31
+Index: 132 Block: 26 Data = 32
+Index: 133 Block: 26 Data = 33
+Index: 134 Block: 26 Data = 27
+**********************************************************************
+
+Index: 135 Block: 27 Data = 34
+Index: 136 Block: 27 Data = 49
+Index: 137 Block: 27 Data = -1
+Directory Row = 1
+dirMem[2] = 2
+dirMem[1] = 15
+dirMem[0] = 27
+
+====================================================
+Next Command:
+
+ADD, 3, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 3, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 53, 43, 44, 45
+Index: 140 Block: 28 Data = 20
+Index: 141 Block: 28 Data = 21
+Index: 142 Block: 28 Data = 22
+Index: 143 Block: 28 Data = 23
+Index: 144 Block: 28 Data = 29
+**********************************************************************
+
+Index: 145 Block: 29 Data = 24
+Index: 146 Block: 29 Data = 25
+Index: 147 Block: 29 Data = 26
+Index: 148 Block: 29 Data = 27
+Index: 149 Block: 29 Data = 30
+**********************************************************************
+
+Index: 150 Block: 30 Data = 28
+Index: 151 Block: 30 Data = 29
+Index: 152 Block: 30 Data = 30
+Index: 153 Block: 30 Data = 31
+Index: 154 Block: 30 Data = 31
+**********************************************************************
+
+Index: 155 Block: 31 Data = 32
+Index: 156 Block: 31 Data = 33
+Index: 157 Block: 31 Data = 34
+Index: 158 Block: 31 Data = 35
+Index: 159 Block: 31 Data = 32
+**********************************************************************
+
+Index: 160 Block: 32 Data = 36
+Index: 161 Block: 32 Data = 37
+Index: 162 Block: 32 Data = 38
+Index: 163 Block: 32 Data = 39
+Index: 164 Block: 32 Data = 33
+**********************************************************************
+
+Index: 165 Block: 33 Data = 40
+Index: 166 Block: 33 Data = 41
+Index: 167 Block: 33 Data = 42
+Index: 168 Block: 33 Data = 43
+Index: 169 Block: 33 Data = 34
+**********************************************************************
+
+Index: 170 Block: 34 Data = 44
+Index: 171 Block: 34 Data = 45
+Index: 172 Block: 34 Data = 3
+Index: 173 Block: 34 Data = 20
+Index: 174 Block: 34 Data = 35
+**********************************************************************
+
+Index: 175 Block: 35 Data = 21
+Index: 176 Block: 35 Data = 22
+Index: 177 Block: 35 Data = 23
+Index: 178 Block: 35 Data = 24
+Index: 179 Block: 35 Data = 36
+**********************************************************************
+
+Index: 180 Block: 36 Data = 25
+Index: 181 Block: 36 Data = 26
+Index: 182 Block: 36 Data = 27
+Index: 183 Block: 36 Data = 28
+Index: 184 Block: 36 Data = 37
+**********************************************************************
+
+Index: 185 Block: 37 Data = 29
+Index: 186 Block: 37 Data = 30
+Index: 187 Block: 37 Data = 31
+Index: 188 Block: 37 Data = 32
+Index: 189 Block: 37 Data = 38
+**********************************************************************
+
+Index: 190 Block: 38 Data = 33
+Index: 191 Block: 38 Data = 34
+Index: 192 Block: 38 Data = 35
+Index: 193 Block: 38 Data = 36
+Index: 194 Block: 38 Data = 39
+**********************************************************************
+
+Index: 195 Block: 39 Data = 37
+Index: 196 Block: 39 Data = 38
+Index: 197 Block: 39 Data = 39
+Index: 198 Block: 39 Data = 40
+Index: 199 Block: 39 Data = 40
+**********************************************************************
+
+Index: 200 Block: 40 Data = 41
+Index: 201 Block: 40 Data = 53
+Index: 202 Block: 40 Data = 43
+Index: 203 Block: 40 Data = 44
+Index: 204 Block: 40 Data = 41
+**********************************************************************
+
+Index: 205 Block: 41 Data = 45
+Index: 206 Block: 41 Data = -1
+Directory Row = 2
+dirMem[2] = 3
+dirMem[1] = 28
+dirMem[0] = 41
+
+====================================================
+Next Command:
+
+ADD, 4, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 4, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 51, 55
+Index: 210 Block: 42 Data = 31
+Index: 211 Block: 42 Data = 32
+Index: 212 Block: 42 Data = 33
+Index: 213 Block: 42 Data = 34
+Index: 214 Block: 42 Data = 43
+**********************************************************************
+
+Index: 215 Block: 43 Data = 35
+Index: 216 Block: 43 Data = 36
+Index: 217 Block: 43 Data = 37
+Index: 218 Block: 43 Data = 38
+Index: 219 Block: 43 Data = 44
+**********************************************************************
+
+Index: 220 Block: 44 Data = 39
+Index: 221 Block: 44 Data = 40
+Index: 222 Block: 44 Data = 41
+Index: 223 Block: 44 Data = 42
+Index: 224 Block: 44 Data = 45
+**********************************************************************
+
+Index: 225 Block: 45 Data = 43
+Index: 226 Block: 45 Data = 44
+Index: 227 Block: 45 Data = 45
+Index: 228 Block: 45 Data = 46
+Index: 229 Block: 45 Data = 46
+**********************************************************************
+
+Index: 230 Block: 46 Data = 47
+Index: 231 Block: 46 Data = 48
+Index: 232 Block: 46 Data = 49
+Index: 233 Block: 46 Data = 50
+Index: 234 Block: 46 Data = 47
+**********************************************************************
+
+Index: 235 Block: 47 Data = 51
+Index: 236 Block: 47 Data = 52
+Index: 237 Block: 47 Data = 53
+Index: 238 Block: 47 Data = 54
+Index: 239 Block: 47 Data = 48
+**********************************************************************
+
+Index: 240 Block: 48 Data = 55
+Index: 241 Block: 48 Data = 4
+Index: 242 Block: 48 Data = 31
+Index: 243 Block: 48 Data = 32
+Index: 244 Block: 48 Data = 49
+**********************************************************************
+
+Index: 245 Block: 49 Data = 33
+Index: 246 Block: 49 Data = 34
+Index: 247 Block: 49 Data = 35
+Index: 248 Block: 49 Data = 36
+Index: 249 Block: 49 Data = 50
+**********************************************************************
+
+Index: 250 Block: 50 Data = 37
+Index: 251 Block: 50 Data = 38
+Index: 252 Block: 50 Data = 39
+Index: 253 Block: 50 Data = 40
+Index: 254 Block: 50 Data = 51
+**********************************************************************
+
+Index: 255 Block: 51 Data = 41
+Index: 256 Block: 51 Data = 42
+Index: 257 Block: 51 Data = 43
+Index: 258 Block: 51 Data = 44
+Index: 259 Block: 51 Data = 52
+**********************************************************************
+
+Index: 260 Block: 52 Data = 45
+Index: 261 Block: 52 Data = 46
+Index: 262 Block: 52 Data = 47
+Index: 263 Block: 52 Data = 48
+Index: 264 Block: 52 Data = 53
+**********************************************************************
+
+Index: 265 Block: 53 Data = 49
+Index: 266 Block: 53 Data = 50
+Index: 267 Block: 53 Data = 51
+Index: 268 Block: 53 Data = 52
+Index: 269 Block: 53 Data = 54
+**********************************************************************
+
+Index: 270 Block: 54 Data = 53
+Index: 271 Block: 54 Data = 51
+Index: 272 Block: 54 Data = 55
+Index: 273 Block: 54 Data = 44
+Index: 274 Block: 54 Data = 55
+**********************************************************************
+
+Index: 275 Block: 55 Data = 45
+Index: 276 Block: 55 Data = -1
+Directory Row = 3
+dirMem[2] = 4
+dirMem[1] = 42
+dirMem[0] = 55
+
+====================================================
+Next Command:
+
+ADD, 5, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 5, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55
+Index: 280 Block: 56 Data = 40
+Index: 281 Block: 56 Data = 41
+Index: 282 Block: 56 Data = 42
+Index: 283 Block: 56 Data = 43
+Index: 284 Block: 56 Data = 57
+**********************************************************************
+
+Index: 285 Block: 57 Data = 44
+Index: 286 Block: 57 Data = 45
+Index: 287 Block: 57 Data = 46
+Index: 288 Block: 57 Data = 47
+Index: 289 Block: 57 Data = 58
+**********************************************************************
+
+Index: 290 Block: 58 Data = 48
+Index: 291 Block: 58 Data = 49
+Index: 292 Block: 58 Data = 50
+Index: 293 Block: 58 Data = 51
+Index: 294 Block: 58 Data = 59
+**********************************************************************
+
+Index: 295 Block: 59 Data = 52
+Index: 296 Block: 59 Data = 53
+Index: 297 Block: 59 Data = 54
+Index: 298 Block: 59 Data = 55
+Index: 299 Block: 59 Data = 60
+**********************************************************************
+
+Index: 300 Block: 60 Data = 5
+Index: 301 Block: 60 Data = 40
+Index: 302 Block: 60 Data = 41
+Index: 303 Block: 60 Data = 42
+Index: 304 Block: 60 Data = 61
+**********************************************************************
+
+Index: 305 Block: 61 Data = 43
+Index: 306 Block: 61 Data = 44
+Index: 307 Block: 61 Data = 45
+Index: 308 Block: 61 Data = 46
+Index: 309 Block: 61 Data = 62
+**********************************************************************
+
+Index: 310 Block: 62 Data = 47
+Index: 311 Block: 62 Data = 48
+Index: 312 Block: 62 Data = 49
+Index: 313 Block: 62 Data = 50
+Index: 314 Block: 62 Data = 63
+**********************************************************************
+
+Index: 315 Block: 63 Data = 51
+Index: 316 Block: 63 Data = 52
+Index: 317 Block: 63 Data = 53
+Index: 318 Block: 63 Data = 54
+Index: 319 Block: 63 Data = 64
+**********************************************************************
+
+Index: 320 Block: 64 Data = 55
+Index: 321 Block: 64 Data = -1
+Directory Row = 4
+dirMem[2] = 5
+dirMem[1] = 56
+dirMem[0] = 64
+
+====================================================
+Next Command:
+
+ADD, 6, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 6, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69
+Index: 325 Block: 65 Data = 51
+Index: 326 Block: 65 Data = 52
+Index: 327 Block: 65 Data = 53
+Index: 328 Block: 65 Data = 54
+Index: 329 Block: 65 Data = 66
+**********************************************************************
+
+Index: 330 Block: 66 Data = 55
+Index: 331 Block: 66 Data = 56
+Index: 332 Block: 66 Data = 57
+Index: 333 Block: 66 Data = 58
+Index: 334 Block: 66 Data = 67
+**********************************************************************
+
+Index: 335 Block: 67 Data = 59
+Index: 336 Block: 67 Data = 60
+Index: 337 Block: 67 Data = 61
+Index: 338 Block: 67 Data = 62
+Index: 339 Block: 67 Data = 68
+**********************************************************************
+
+Index: 340 Block: 68 Data = 63
+Index: 341 Block: 68 Data = 64
+Index: 342 Block: 68 Data = 65
+Index: 343 Block: 68 Data = 66
+Index: 344 Block: 68 Data = 69
+**********************************************************************
+
+Index: 345 Block: 69 Data = 67
+Index: 346 Block: 69 Data = 68
+Index: 347 Block: 69 Data = 69
+Index: 348 Block: 69 Data = 6
+Index: 349 Block: 69 Data = 70
+**********************************************************************
+
+Index: 350 Block: 70 Data = 51
+Index: 351 Block: 70 Data = 52
+Index: 352 Block: 70 Data = 53
+Index: 353 Block: 70 Data = 54
+Index: 354 Block: 70 Data = 71
+**********************************************************************
+
+Index: 355 Block: 71 Data = 55
+Index: 356 Block: 71 Data = 56
+Index: 357 Block: 71 Data = 57
+Index: 358 Block: 71 Data = 58
+Index: 359 Block: 71 Data = 72
+**********************************************************************
+
+Index: 360 Block: 72 Data = 59
+Index: 361 Block: 72 Data = 60
+Index: 362 Block: 72 Data = 61
+Index: 363 Block: 72 Data = 62
+Index: 364 Block: 72 Data = 73
+**********************************************************************
+
+Index: 365 Block: 73 Data = 63
+Index: 366 Block: 73 Data = 64
+Index: 367 Block: 73 Data = 65
+Index: 368 Block: 73 Data = 66
+Index: 369 Block: 73 Data = 74
+**********************************************************************
+
+Index: 370 Block: 74 Data = 67
+Index: 371 Block: 74 Data = 68
+Index: 372 Block: 74 Data = 69
+Index: 373 Block: 74 Data = -1
+Directory Row = 5
+dirMem[2] = 6
+dirMem[1] = 65
+dirMem[0] = 74
+
+====================================================
+Next Command:
+
+ADD, 7, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 7, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81
+Index: 375 Block: 75 Data = 60
+Index: 376 Block: 75 Data = 61
+Index: 377 Block: 75 Data = 62
+Index: 378 Block: 75 Data = 63
+Index: 379 Block: 75 Data = 76
+**********************************************************************
+
+Index: 380 Block: 76 Data = 64
+Index: 381 Block: 76 Data = 65
+Index: 382 Block: 76 Data = 66
+Index: 383 Block: 76 Data = 67
+Index: 384 Block: 76 Data = 77
+**********************************************************************
+
+Index: 385 Block: 77 Data = 68
+Index: 386 Block: 77 Data = 69
+Index: 387 Block: 77 Data = 70
+Index: 388 Block: 77 Data = 71
+Index: 389 Block: 77 Data = 78
+**********************************************************************
+
+Index: 390 Block: 78 Data = 72
+Index: 391 Block: 78 Data = 73
+Index: 392 Block: 78 Data = 74
+Index: 393 Block: 78 Data = 75
+Index: 394 Block: 78 Data = 79
+**********************************************************************
+
+Index: 395 Block: 79 Data = 76
+Index: 396 Block: 79 Data = 77
+Index: 397 Block: 79 Data = 78
+Index: 398 Block: 79 Data = 79
+Index: 399 Block: 79 Data = 80
+**********************************************************************
+
+Index: 400 Block: 80 Data = 80
+Index: 401 Block: 80 Data = 81
+Index: 402 Block: 80 Data = 7
+Index: 403 Block: 80 Data = 60
+Index: 404 Block: 80 Data = 81
+**********************************************************************
+
+Index: 405 Block: 81 Data = 61
+Index: 406 Block: 81 Data = 62
+Index: 407 Block: 81 Data = 63
+Index: 408 Block: 81 Data = 64
+Index: 409 Block: 81 Data = 82
+**********************************************************************
+
+Index: 410 Block: 82 Data = 65
+Index: 411 Block: 82 Data = 66
+Index: 412 Block: 82 Data = 67
+Index: 413 Block: 82 Data = 68
+Index: 414 Block: 82 Data = 83
+**********************************************************************
+
+Index: 415 Block: 83 Data = 69
+Index: 416 Block: 83 Data = 70
+Index: 417 Block: 83 Data = 71
+Index: 418 Block: 83 Data = 72
+Index: 419 Block: 83 Data = 84
+**********************************************************************
+
+Index: 420 Block: 84 Data = 73
+Index: 421 Block: 84 Data = 74
+Index: 422 Block: 84 Data = 75
+Index: 423 Block: 84 Data = 76
+Index: 424 Block: 84 Data = 85
+**********************************************************************
+
+Index: 425 Block: 85 Data = 77
+Index: 426 Block: 85 Data = 78
+Index: 427 Block: 85 Data = 79
+Index: 428 Block: 85 Data = 80
+Index: 429 Block: 85 Data = 86
+**********************************************************************
+
+Index: 430 Block: 86 Data = 81
+Index: 431 Block: 86 Data = -1
+Directory Row = 6
+dirMem[2] = 7
+dirMem[1] = 75
+dirMem[0] = 86
+
+====================================================
+Next Command:
+
+ADD, 8, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 8, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94
+Index: 435 Block: 87 Data = 71
+Index: 436 Block: 87 Data = 72
+Index: 437 Block: 87 Data = 73
+Index: 438 Block: 87 Data = 74
+Index: 439 Block: 87 Data = 88
+**********************************************************************
+
+Index: 440 Block: 88 Data = 75
+Index: 441 Block: 88 Data = 76
+Index: 442 Block: 88 Data = 77
+Index: 443 Block: 88 Data = 78
+Index: 444 Block: 88 Data = 89
+**********************************************************************
+
+Index: 445 Block: 89 Data = 79
+Index: 446 Block: 89 Data = 80
+Index: 447 Block: 89 Data = 81
+Index: 448 Block: 89 Data = 82
+Index: 449 Block: 89 Data = 90
+**********************************************************************
+
+Index: 450 Block: 90 Data = 83
+Index: 451 Block: 90 Data = 84
+Index: 452 Block: 90 Data = 85
+Index: 453 Block: 90 Data = 86
+Index: 454 Block: 90 Data = 91
+**********************************************************************
+
+Index: 455 Block: 91 Data = 87
+Index: 456 Block: 91 Data = 88
+Index: 457 Block: 91 Data = 89
+Index: 458 Block: 91 Data = 90
+Index: 459 Block: 91 Data = 92
+**********************************************************************
+
+Index: 460 Block: 92 Data = 91
+Index: 461 Block: 92 Data = 92
+Index: 462 Block: 92 Data = 93
+Index: 463 Block: 92 Data = 94
+Index: 464 Block: 92 Data = 93
+**********************************************************************
+
+Index: 465 Block: 93 Data = 8
+Index: 466 Block: 93 Data = 71
+Index: 467 Block: 93 Data = 72
+Index: 468 Block: 93 Data = 73
+Index: 469 Block: 93 Data = 94
+**********************************************************************
+
+Index: 470 Block: 94 Data = 74
+Index: 471 Block: 94 Data = 75
+Index: 472 Block: 94 Data = 76
+Index: 473 Block: 94 Data = 77
+Index: 474 Block: 94 Data = 95
+**********************************************************************
+
+Index: 475 Block: 95 Data = 78
+Index: 476 Block: 95 Data = 79
+Index: 477 Block: 95 Data = 80
+Index: 478 Block: 95 Data = 81
+Index: 479 Block: 95 Data = 96
+**********************************************************************
+
+Index: 480 Block: 96 Data = 82
+Index: 481 Block: 96 Data = 83
+Index: 482 Block: 96 Data = 84
+Index: 483 Block: 96 Data = 85
+Index: 484 Block: 96 Data = 97
+**********************************************************************
+
+Index: 485 Block: 97 Data = 86
+Index: 486 Block: 97 Data = 87
+Index: 487 Block: 97 Data = 88
+Index: 488 Block: 97 Data = 89
+Index: 489 Block: 97 Data = 98
+**********************************************************************
+
+Index: 490 Block: 98 Data = 90
+Index: 491 Block: 98 Data = 91
+Index: 492 Block: 98 Data = 92
+Index: 493 Block: 98 Data = 93
+Index: 494 Block: 98 Data = 99
+**********************************************************************
+
+Index: 495 Block: 99 Data = 94
+Index: 496 Block: 99 Data = 49
+Index: 497 Block: 99 Data = 55
+Index: 498 Block: 99 Data = 44
+Disk Full !!!
+
+Directory Row = 7
+dirMem[2] = 8
+dirMem[1] = 87
+dirMem[0] = 99
+
+====================================================
+Next Command:
+
+ADD, 9, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 9, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100
+Disk Full !!!
+
+
+====================================================
+Next Command:
+
+ADD, 10, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 10, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113
+Disk Full !!!
+
+
+====================================================
+Next Command:
+
+ADD, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119
+Disk Full !!!
+
+
+====================================================
+Next Command:
+
+
+READ, 1
+dirMem[2] = 1
+dirMem[1] = 2
+dirMem[0] = 14
+This is the Data Block
+Index: 10 Block: 2 First Data = 2
+Index: 11 Block: 2 First Data = 3
+Index: 12 Block: 2 First Data = 4
+Index: 13 Block: 2 First Data = 5
+Index: 15 Block: 2 First Data = 6
+Index: 16 Block: 2 First Data = 7
+Index: 17 Block: 2 First Data = 8
+Index: 18 Block: 2 First Data = 9
+Index: 20 Block: 2 First Data = 10
+Index: 21 Block: 2 First Data = 11
+Index: 22 Block: 2 First Data = 12
+Index: 23 Block: 2 First Data = 13
+Index: 25 Block: 2 First Data = 14
+Index: 26 Block: 2 First Data = 15
+Index: 27 Block: 2 First Data = 16
+Index: 28 Block: 2 First Data = 17
+Index: 30 Block: 2 First Data = 18
+Index: 31 Block: 2 First Data = 19
+Index: 32 Block: 2 First Data = 20
+Index: 33 Block: 2 First Data = 21
+Index: 35 Block: 2 First Data = 22
+Index: 36 Block: 2 First Data = 23
+Index: 37 Block: 2 First Data = 24
+Index: 38 Block: 2 First Data = 25
+Index: 40 Block: 2 First Data = 1
+Index: 41 Block: 2 First Data = 2
+Index: 42 Block: 2 First Data = 3
+Index: 43 Block: 2 First Data = 4
+Index: 45 Block: 2 First Data = 5
+Index: 46 Block: 2 First Data = 6
+Index: 47 Block: 2 First Data = 7
+Index: 48 Block: 2 First Data = 8
+Index: 50 Block: 2 First Data = 9
+Index: 51 Block: 2 First Data = 10
+Index: 52 Block: 2 First Data = 11
+Index: 53 Block: 2 First Data = 12
+Index: 55 Block: 2 First Data = 13
+Index: 56 Block: 2 First Data = 14
+Index: 57 Block: 2 First Data = 15
+Index: 58 Block: 2 First Data = 16
+Index: 60 Block: 2 First Data = 17
+Index: 61 Block: 2 First Data = 18
+Index: 62 Block: 2 First Data = 19
+Index: 63 Block: 2 First Data = 20
+Index: 65 Block: 2 First Data = 21
+Index: 66 Block: 2 First Data = 22
+Index: 67 Block: 2 First Data = 23
+Index: 68 Block: 2 First Data = 24
+Index: 70 Block: 2 First Data = 25
+Index: 71 Block: 2 First Data = 49
+The read file is 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,49
+=============================================================
+
+DELETE, 4
+dirMem[2] = 4
+dirMem[1] = 42
+dirMem[0] = 55
+This is the Data Block
+Filename 4 is deleted
+=============================================================
+
+Invalid command!!!
+
+-------------------------------------------------------
+|      Free space bitmap
+-------------------------------------------------------
+| Row || 7 || 6 || 5 || 4 || 3 || 2 || 1 || 0 |
+-------------------------------------------------------
+ |  0 || 0 || 0 || 0 || 0 || 0 || 0 || 0 || 0 ||
+-------------------------------------------------------
+ |  1 || 0 || 0 || 0 || 0 || 0 || 0 || 0 || 0 ||
+-------------------------------------------------------
+ |  2 || 0 || 0 || 0 || 0 || 0 || 0 || 0 || 0 ||
+-------------------------------------------------------
+ |  3 || 0 || 0 || 0 || 0 || 0 || 0 || 0 || 0 ||
+-------------------------------------------------------
+ |  4 || 0 || 0 || 0 || 0 || 0 || 0 || 0 || 0 ||
+-------------------------------------------------------
+ |  5 || 1 || 1 || 1 || 1 || 1 || 1 || 0 || 0 ||
+-------------------------------------------------------
+ |  6 || 1 || 1 || 1 || 1 || 1 || 1 || 1 || 1 ||
+-------------------------------------------------------
+ |  7 || 0 || 0 || 0 || 0 || 0 || 0 || 0 || 0 ||
+-------------------------------------------------------
+ |  8 || 0 || 0 || 0 || 0 || 0 || 0 || 0 || 0 ||
+-------------------------------------------------------
+ |  9 || 0 || 0 || 0 || 0 || 0 || 0 || 0 || 0 ||
+-------------------------------------------------------
+ | 10 || 0 || 0 || 0 || 0 || 0 || 0 || 0 || 0 ||
+-------------------------------------------------------
+ | 11 || 0 || 0 || 0 || 0 || 0 || 0 || 0 || 0 ||
+-------------------------------------------------------
+ | 12 || 1 || 1 || 1 || 1 || 0 || 0 || 0 || 0 ||
+-------------------------------------------------------
+
